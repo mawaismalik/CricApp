@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CricApp</string>
+    <string name="home">Home</string>
+    <string name="account">Account</string>
+</resources>
