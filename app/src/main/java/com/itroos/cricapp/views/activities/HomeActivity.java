@@ -30,16 +30,17 @@ public class HomeActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_home);
         ButterKnife.inject(this);
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, HomeFragment.newInstance()).commit();
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected( MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.id_home:
-                        fragment  = AccountFragment.newInstance();
+                        fragment  = HomeFragment.newInstance();
                         Toast.makeText(getApplicationContext(), "home", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.id_account:
-                        fragment  = HomeFragment.newInstance();
+                        fragment  = AccountFragment.newInstance();
                         Toast.makeText(getApplicationContext(), "account", Toast.LENGTH_SHORT).show();
                         break;
                 }
