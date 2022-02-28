@@ -13,12 +13,12 @@ import androidx.fragment.app.Fragment;
 import com.itroos.cricapp.R;
 
 
-public class HomeFragment extends Fragment {
+public class PlayersFragment extends Fragment {
 
 
 
-    public static HomeFragment newInstance() {
-        return new HomeFragment();
+    public static PlayersFragment newInstance() {
+        return new PlayersFragment();
     }
 
     @Override
@@ -26,7 +26,7 @@ public class HomeFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
-        toolbar.setTitle("Home");
+        toolbar.setTitle("All Players");
 
         return view;
     }

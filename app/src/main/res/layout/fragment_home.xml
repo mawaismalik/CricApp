@@ -1,19 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="home"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+    <include layout="@layout/toolbar" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:text="@string/present_matches"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@android:color/black" />
+    </LinearLayout>
+
+
+    <include layout="@layout/row_item_matches"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/three_margin"
+        android:layout_marginHorizontal="@dimen/five_margin"/>
+
+    <include layout="@layout/row_item_matches"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/three_margin"
+        android:layout_marginHorizontal="@dimen/five_margin"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:text="@string/resent_matches"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@android:color/black" />
+    </LinearLayout>
+
+    <include layout="@layout/row_item_matches"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/three_margin"
+        android:layout_marginHorizontal="@dimen/five_margin"/>
+
+    <include layout="@layout/row_item_matches"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/three_margin"
+        android:layout_marginHorizontal="@dimen/five_margin"/>
+
+    <include layout="@layout/row_item_matches"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/three_margin"
+        android:layout_marginHorizontal="@dimen/five_margin"/>
+
+    <include layout="@layout/row_item_matches"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/three_margin"
+        android:layout_marginHorizontal="@dimen/five_margin"/>
+
+    <include layout="@layout/row_item_matches"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/three_margin"
+        android:layout_marginHorizontal="@dimen/five_margin"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

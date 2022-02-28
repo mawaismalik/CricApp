@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/toolbar" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+
+    <include layout="@layout/row_item_matches"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/three_margin"
+        android:layout_marginHorizontal="@dimen/five_margin"/>
+
+    <include layout="@layout/row_item_matches"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/three_margin"
+        android:layout_marginHorizontal="@dimen/five_margin"/>
+
+    <include layout="@layout/row_item_matches"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/three_margin"
+        android:layout_marginHorizontal="@dimen/five_margin"/>
+
+    <include layout="@layout/row_item_matches"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/three_margin"
+        android:layout_marginHorizontal="@dimen/five_margin"/>
+
+    <include layout="@layout/row_item_matches"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/three_margin"
+        android:layout_marginHorizontal="@dimen/five_margin"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

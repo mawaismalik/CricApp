@@ -7,7 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
 
-    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimary">#263238</color>
     <color name="colorPrimaryLight">#0085ca</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="datePickerHeader">#1986ac</color>

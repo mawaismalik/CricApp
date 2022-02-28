@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/spacing_medium"
+    android:layout_marginTop="@dimen/five_margin"
+    android:layout_marginEnd="@dimen/five_margin"
+    android:layout_marginStart="@dimen/five_margin"
+    app:cardElevation="@dimen/spacing_medium"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/attendanceRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/serial_number_attendance_mer"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="1"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_team_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="Team A"
+                        android:paddingStart="@dimen/spacing_medium"
+                        android:paddingEnd="@dimen/spacing_medium"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        />
+                    <TextView
+                        android:id="@+id/tv_vs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="VS"
+                        android:paddingStart="@dimen/spacing_medium"
+                        android:paddingEnd="@dimen/spacing_medium"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        />
+                    <TextView
+                        android:id="@+id/tv_team_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="Team B"
+                        android:paddingStart="@dimen/spacing_medium"
+                        android:paddingEnd="@dimen/spacing_medium"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Score"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/spacing_medium"
+                        android:paddingEnd="@dimen/spacing_medium" />
+                    <TextView
+                        android:id="@+id/tv_wo_site"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/S123"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/spacing_medium"
+                        android:paddingEnd="@dimen/spacing_medium" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+
+
+            <TextView
+                android:id="@+id/attendance_status_mer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="89dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/ten_margin"
+                android:layout_marginBottom="@dimen/five_margin"
+                android:background="@drawable/view_default"
+                android:gravity="center"
+                android:text="@string/status"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/wo_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_default_gray"
+                    android:text="@string/date_dummy"
+                    android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/ten_margin"
+                    android:minWidth="89dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/attendanceIDDraft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

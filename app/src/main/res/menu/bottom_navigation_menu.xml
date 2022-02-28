@@ -6,6 +6,21 @@
         android:icon="@drawable/ic_home"
         android:title="@string/home"/>
     <item
+        android:id="@+id/id_all_matches"
+        android:enabled="true"
+        android:icon="@drawable/ic_matches"
+        android:title="@string/matches"/>
+    <item
+        android:id="@+id/id_config"
+        android:enabled="true"
+        android:icon="@drawable/ic_cricket_player"
+        android:title="@string/new_match"/>
+    <item
+        android:id="@+id/id_all_teams"
+        android:enabled="true"
+        android:icon="@drawable/ic_teams"
+        android:title="@string/teams"/>
+    <item
         android:id="@+id/id_account"
         android:enabled="true"
         android:icon="@drawable/ic_account"

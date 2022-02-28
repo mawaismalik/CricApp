@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">14dp</dimen>
+
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">180dp</dimen>
+
+
+    <dimen name="ls_linear_padding">24dp</dimen>
+    <dimen name="ls_linear_paddingTop">56dp</dimen>
+    <dimen name="ls_linear_textViewHeight">102dp</dimen>
+
+    <dimen name="thirteen_margin">13dp</dimen>
+
+    <dimen name="textInputLayoutMargin">6dp</dimen>
+
+
+    <dimen name="spinner_left_margin">9dp</dimen>
+    <dimen name="spinner_right_margin">11dp</dimen>
+    <dimen name="spinner_top_margin">9dp</dimen>
+    <dimen name="spinner_bottom_margin">9dp</dimen>
+    <dimen name="spinner_left_padding">9dp</dimen>
+    <dimen name="spinner_text_size">14sp</dimen>
+    <dimen name="spinner_dropdown_text_size">30sp</dimen>
+    <dimen name="spinner_dropdown_padding">20dp</dimen>
+
+    <dimen name="spacing_xsmall">2dp</dimen>
+    <dimen name="spacing_small">3dp</dimen>
+    <dimen name="spacing_medium">5dp</dimen>
+    <dimen name="spacing_xmedium">7dp</dimen>
+    <dimen name="spacing_middle">10dp</dimen>
+    <dimen name="spacing_large">15dp</dimen>
+    <dimen name="spacing_smlarge">18dp</dimen>
+    <dimen name="spacing_mlarge">20dp</dimen>
+    <dimen name="spacing_mxlarge">25dp</dimen>
+    <dimen name="spacing_xlarge">35dp</dimen>
+    <dimen name="spacing_xmlarge">40dp</dimen>
+    <dimen name="spacing_xxlarge">50dp</dimen>
+    <dimen name="spacing_xxxlarge">55dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+
+    <dimen name="one_margin">1dp</dimen>
+    <dimen name="two_margin">2dp</dimen>
+    <dimen name="three_margin">3dp</dimen>
+    <dimen name="four_margin">4dp</dimen>
+    <dimen name="five_margin">5dp</dimen>
+    <dimen name="six_margin">6dp</dimen>
+    <dimen name="seven_margin">7dp</dimen>
+    <dimen name="eight_margin">8dp</dimen>
+    <dimen name="nine_margin">9dp</dimen>
+    <dimen name="ten_margin">10dp</dimen>
+    <dimen name="fifteen_margin">15dp</dimen>
+    <dimen name="label_size">12sp</dimen>
+    <dimen name="onefifty_margin">150</dimen>
+
+</resources>

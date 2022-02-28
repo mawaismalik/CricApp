@@ -14,7 +14,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.itroos.cricapp.R;
 import com.itroos.cricapp.views.fragments.AccountFragment;
+import com.itroos.cricapp.views.fragments.ConfigFragment;
 import com.itroos.cricapp.views.fragments.HomeFragment;
+import com.itroos.cricapp.views.fragments.MatchesFragment;
+import com.itroos.cricapp.views.fragments.TeamsFragment;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -37,11 +40,23 @@ public class HomeActivity extends AppCompatActivity  {
                 switch (item.getItemId()){
                     case R.id.id_home:
                         fragment  = HomeFragment.newInstance();
-                        Toast.makeText(getApplicationContext(), "home", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(getApplicationContext(), "home", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.id_account:
                         fragment  = AccountFragment.newInstance();
-                        Toast.makeText(getApplicationContext(), "account", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(getApplicationContext(), "account", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.id_config:
+                        fragment  = ConfigFragment.newInstance();
+                        // Toast.makeText(getApplicationContext(), "account", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.id_all_teams:
+                        fragment  = TeamsFragment.newInstance();
+                        //Toast.makeText(getApplicationContext(), "teams", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.id_all_matches:
+                        fragment  = MatchesFragment.newInstance();
+                        //Toast.makeText(getApplicationContext(), "matches", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 if(fragment != null){

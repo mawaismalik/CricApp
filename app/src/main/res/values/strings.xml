@@ -2,4 +2,26 @@
     <string name="app_name">CricApp</string>
     <string name="home">Home</string>
     <string name="account">Account</string>
+    <string name="matches">Matches</string>
+    <string name="teams">Teams</string>
+    <string name="Score">Score:</string>
+    <string name="S123">123</string>
+    <string name="status">status</string>
+    <string name="date_dummy">01-03-2022</string>
+    <string name="no_of_players">Number of Players:</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="batter_per_team">Batters per Team</string>
+    <string name="overs_per_innings">Overs per Innings</string>
+    <string name="max_overs_per_bowlers">Max over per bowler</string>
+    <string name="superover">Superover</string>
+    <string name="continue_">continue</string>
+    <string name="present_matches">Present Matches</string>
+    <string name="resent_matches">Recent Matches</string>
+    <string name="start_match">Start Match</string>
+    <string name="new_match">New Match</string>
+    <string name="match_config">Match Configuration</string>
+    <string name="add">add</string>
+    <string name="team_name">Team Name</string>
+    <string name="add_team">Add Team</string>
 </resources>

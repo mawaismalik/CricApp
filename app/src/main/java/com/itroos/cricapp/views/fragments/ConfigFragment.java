@@ -13,20 +13,20 @@ import androidx.fragment.app.Fragment;
 import com.itroos.cricapp.R;
 
 
-public class HomeFragment extends Fragment {
+public class ConfigFragment extends Fragment {
 
 
 
-    public static HomeFragment newInstance() {
-        return new HomeFragment();
+    public static ConfigFragment newInstance() {
+        return new ConfigFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_configuration, container, false);
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
-        toolbar.setTitle("Home");
+        toolbar.setTitle("New Match");
 
         return view;
     }
