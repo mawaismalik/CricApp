@@ -1,0 +1,24 @@
+package com.itroos.cricapp.helpers;
+
+import android.os.Environment;
+
+public class Config {
+
+    public interface InputType{
+        String Text = "Text";
+        String Radio = "Radio";
+        String Checkbox = "Checkbox";
+        String Label = "Label";
+        String AnySpecialServices = "Any Special Services";
+
+    }
+
+
+    public interface dateFormat{
+        String ID_DATE = "yyyyddMM-HHmmssS";
+        String DATE_FOMAT = "yyyy-MM-dd'T'HH:mm:ss.SSS";
+        String Short_Date_Format = "yyyy-MM-dd";
+        String TIME_FOMAT = "hh:mm a";
+    }
+
+}

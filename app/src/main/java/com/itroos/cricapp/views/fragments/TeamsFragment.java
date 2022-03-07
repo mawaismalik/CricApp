@@ -32,11 +32,11 @@ public class TeamsFragment extends Fragment {
         return new TeamsFragment();
     }
 
-    @Override
+   /* @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-    }
+    }*/
 
 
     @Override
@@ -59,7 +59,7 @@ public class TeamsFragment extends Fragment {
 
 
 
-    @Override
+   /* @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, MenuInflater inflater) {
         menu.clear();
         inflater.inflate(R.menu.add_data, menu);
@@ -77,6 +77,6 @@ public class TeamsFragment extends Fragment {
 
         return super.onOptionsItemSelected(item);
 
-    }
+    }*/
 
 }

@@ -24,4 +24,10 @@
     <string name="add">add</string>
     <string name="team_name">Team Name</string>
     <string name="add_team">Add Team</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_player">Add Players</string>
+    <string name="player_name">Enter player name</string>
+    <string name="player_number">Enter player number</string>
+    <string name="players">Players</string>
 </resources>

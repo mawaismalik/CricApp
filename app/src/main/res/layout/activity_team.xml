@@ -5,73 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/listSeperator"
     tools:context=".views.activities.TeamActivity">
 
-    <include layout="@layout/toolbar" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay1"
+        app:elevation="4dp">
+
+        <include layout="@layout/toolbar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="@dimen/four_margin"
+        android:layout_marginRight="@dimen/four_margin"
+        android:layout_weight="16">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpPagerTeams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="@dimen/spacing_medium"
-        android:orientation="horizontal">
+        android:layout_weight=".08">
 
-        <View
+        <me.relex.circleindicator.CircleIndicator
+            android:visibility="visible"
+            android:id="@+id/indicator"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:background="@android:color/black" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="monospace"
-            android:padding="10dp"
-            android:text="@string/add_team"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:background="@android:color/black" />
+            android:layout_height="23dp"
+            app:ci_drawable="@drawable/ci_drawable_selected"
+            app:ci_drawable_unselected="@drawable/ci_drawable_unselected" />
     </LinearLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:id="@+id/tam"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/five_margin"
-        tools:hintTextAppearance="@style/textAppearance.TextInputLayout">
-
-        <EditText
-            android:id="@+id/et_team_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/team_name"
-            android:clickable="true"
-            android:textIsSelectable="false"
-            android:focusable="true"
-            android:longClickable="false"
-            android:inputType="text"
-            android:theme="@style/editTextStyle" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:text="@string/continue_"/>
-
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

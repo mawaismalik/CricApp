@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_margin="@dimen/five_margin"
+    android:id="@+id/root_layout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/id_row_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/seven_margin"
+        android:layout_marginEnd="@dimen/five_margin"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/row_item_srNo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="@string/S123"
+            android:gravity="center"
+            android:textColor="@color/darkBlue"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/row_items_Name"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:background="@color/lightGray"
+        />
+</LinearLayout>
