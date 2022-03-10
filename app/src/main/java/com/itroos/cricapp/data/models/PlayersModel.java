@@ -10,8 +10,18 @@ public class PlayersModel {
 
     private Boolean playingEleven;
 
+    private String teamId;
+
     public String getPlayersId() {
         return playersId;
+    }
+
+    public String getTeamId() {
+        return teamId;
+    }
+
+    public void setTeamId(String teamId) {
+        this.teamId = teamId;
     }
 
     public void setPlayersId(String playersId) {

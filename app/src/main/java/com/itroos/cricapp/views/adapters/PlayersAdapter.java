@@ -32,7 +32,7 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.AuditsVi
     @Override
     public AuditsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.row_items_dropdowns, parent, false);
+                .inflate(R.layout.row_items_players, parent, false);
         return new PlayersAdapter.AuditsViewHolder(itemView);
     }
 
@@ -40,14 +40,19 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.AuditsVi
     public void onBindViewHolder(@NonNull PlayersAdapter.AuditsViewHolder holder, int position) {
 
         PlayersModel playersModel = playersModelList.get(position);
+        position++;
+        if(playersModel.getPlayerNumber() != null) {
+            holder._serialNo.setText(String.valueOf(position));
+        }
 
         if (playersModel.getPlayerName() != null) {
             holder.dataDis.setText(playersModel.getPlayerName());
         }
-        position++;
+
         if(playersModel.getPlayerNumber() != null) {
-            holder._serialNo.setText(String.valueOf(playersModel.getPlayerNumber()));
+            holder._shirtNo.setText(String.valueOf(playersModel.getPlayerNumber()));
         }
+
     }
 
     @Override
@@ -61,13 +66,14 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.AuditsVi
     }
 
     public class AuditsViewHolder extends RecyclerView.ViewHolder {
-        private TextView dataDis, _serialNo;
+        private TextView dataDis, _serialNo, _shirtNo;
 
         public AuditsViewHolder(@NonNull View itemView) {
             super(itemView);
 
             dataDis = itemView.findViewById(R.id.row_items_Name);
             _serialNo = itemView.findViewById(R.id.row_item_srNo);
+            _shirtNo = itemView.findViewById(R.id.row_items_shirtno);
 
 
         }

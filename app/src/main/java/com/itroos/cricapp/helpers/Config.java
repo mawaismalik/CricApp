@@ -13,7 +13,9 @@ public class Config {
 
     }
 
-
+    public interface ExtrasHints{
+        String TEAM_ID = "TEAM_ID";
+    }
     public interface dateFormat{
         String ID_DATE = "yyyyddMM-HHmmssS";
         String DATE_FOMAT = "yyyy-MM-dd'T'HH:mm:ss.SSS";

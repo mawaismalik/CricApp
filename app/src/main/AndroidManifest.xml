@@ -5,9 +5,9 @@
     <application
         android:name=".AppController"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_cricket_player"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_cricket_player"
         android:supportsRtl="true"
         android:theme="@style/Theme.CricApp">
         <activity android:name=".views.activities.TeamActivity"></activity>

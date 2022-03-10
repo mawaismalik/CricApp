@@ -29,4 +29,8 @@ public class PlayersRepository {
         return playersDao.insert(Tools.convertPlayerTosave(players));
     }
 
+    public List<Players> getTeamPlayers(String teamId) {
+        return playersDao.queryBuilder().where((PlayersDao.Properties.TeamId).eq(teamId) ).list();
+    }
+
 }

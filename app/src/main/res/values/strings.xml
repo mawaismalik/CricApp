@@ -30,4 +30,5 @@
     <string name="player_name">Enter player name</string>
     <string name="player_number">Enter player number</string>
     <string name="players">Players</string>
+    <string name="Done">Done</string>
 </resources>

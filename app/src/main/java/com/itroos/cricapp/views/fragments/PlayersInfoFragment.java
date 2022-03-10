@@ -1,11 +1,16 @@
 package com.itroos.cricapp.views.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,12 +24,13 @@ import com.itroos.cricapp.data.models.PlayersModel;
 import com.itroos.cricapp.dbo.entities.Players;
 import com.itroos.cricapp.helpers.Tools;
 import com.itroos.cricapp.views.adapters.PlayersAdapter;
+import com.itroos.cricapp.views.callbacks.PlayersDetails;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class PlayersInfoFragment extends Fragment {
+public class PlayersInfoFragment extends Fragment implements PlayersDetails {
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -33,10 +39,18 @@ public class PlayersInfoFragment extends Fragment {
     private PlayersViewModel playersViewModel;
     private EditText et_player_name, et_player_number;
     private Button btn_add_player;
+    private static String teamId;
+    List<Players> data = new ArrayList<>();
 
-    public static PlayersInfoFragment newInstance() {
+    public static PlayersInfoFragment newInstance(String id) {
+        teamId = id;
         return new PlayersInfoFragment();
     }
+
+  /*  public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }*/
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -71,8 +85,7 @@ public class PlayersInfoFragment extends Fragment {
 
     private void getPlayers(){
 
-        List<Players> data = new ArrayList<>();
-        data = playersViewModel.getAllPlayer();
+        data = playersViewModel.getTeamPlayer(teamId);
         if(data != null) {
             listPlayersModel = Tools.convertPlayersToPojo(data);
             if (!listPlayersModel.isEmpty()) {
@@ -94,6 +107,7 @@ public class PlayersInfoFragment extends Fragment {
         Players player = new Players();
         player.setPlayerName(et_player_name.getText().toString());
         player.setPlayerNumber(Integer.parseInt(et_player_number.getText().toString()));
+        player.setTeamId(teamId);
         playersViewModel.addPlayer(player);
 
         et_player_name.setText("");
@@ -102,4 +116,8 @@ public class PlayersInfoFragment extends Fragment {
         getPlayers();
     }
 
+    @Override
+    public List<Players> getTeamPlayers() {
+        return data;
+    }
 }

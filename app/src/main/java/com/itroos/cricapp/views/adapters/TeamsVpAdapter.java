@@ -11,8 +11,8 @@ import com.itroos.cricapp.views.fragments.TeamInfoFragment;
 public class TeamsVpAdapter extends FragmentPagerAdapter {
 
     private Integer viewType;
-    private Long teamId;
-    public TeamsVpAdapter(FragmentManager fm  , Long teamId) {
+    private String teamId;
+    public TeamsVpAdapter(FragmentManager fm  , String teamId) {
         super(fm);
         this.teamId = teamId;
     }
@@ -21,9 +21,9 @@ public class TeamsVpAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int pos) {
         switch (pos) {
             case 0:
-                return TeamInfoFragment.newInstance();
+                return TeamInfoFragment.newInstance(teamId);
             case 1:
-                return PlayersInfoFragment.newInstance();
+                return PlayersInfoFragment.newInstance(teamId);
             default:
                 return null;
         }

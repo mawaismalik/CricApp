@@ -10,13 +10,15 @@ public class Players {
     private String PlayerName;
     private Integer PlayerNumber;
     private boolean PlayingEleven;
-    @Generated(hash = 413199387)
+    private String TeamId;
+    @Generated(hash = 170038299)
     public Players(String id, String PlayerName, Integer PlayerNumber,
-            boolean PlayingEleven) {
+            boolean PlayingEleven, String TeamId) {
         this.id = id;
         this.PlayerName = PlayerName;
         this.PlayerNumber = PlayerNumber;
         this.PlayingEleven = PlayingEleven;
+        this.TeamId = TeamId;
     }
     @Generated(hash = 1221525943)
     public Players() {
@@ -45,6 +47,11 @@ public class Players {
     public void setPlayingEleven(boolean PlayingEleven) {
         this.PlayingEleven = PlayingEleven;
     }
-   
-
+    public String getTeamId() {
+        return this.TeamId;
+    }
+    public void setTeamId(String TeamId) {
+        this.TeamId = TeamId;
+    }
+  
 }
