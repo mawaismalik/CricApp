@@ -52,6 +52,12 @@ public class Tools {
         return auditType+currentTime;
     }
 
+    public static String matchIdGenerator() {
+        String auditType = "M-";
+        String currentTime =  new SimpleDateFormat(Config.dateFormat.ID_DATE, Locale.getDefault()).format(new Date());
+        return auditType+currentTime;
+    }
+
     public static List<TeamsModel> convertTeamsToPojo(List<Teams> data) {
         List<TeamsModel> teamsModels = new ArrayList<>();
         for(Teams team : data ){

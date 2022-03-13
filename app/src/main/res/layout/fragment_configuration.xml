@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
 
-    <include layout="@layout/toolbar" />
+ <!--   <include layout="@layout/toolbar" />-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,6 +55,7 @@
             android:text="@string/batter_per_team"
             android:textSize="16sp"/>
         <EditText
+            android:id="@+id/batter_per_team"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:gravity="center"
@@ -78,6 +79,7 @@
             android:text="@string/overs_per_innings"
             android:textSize="16sp"/>
         <EditText
+            android:id="@+id/et_over_per_innings"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:inputType="number"
@@ -101,6 +103,7 @@
             android:text="@string/max_overs_per_bowlers"
             android:textSize="16sp"/>
         <EditText
+            android:id="@+id/et_max_over_per_bowler"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:inputType="number"
@@ -124,6 +127,7 @@
             android:text="@string/superover"
             android:textSize="16sp"/>
         <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_superover"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />

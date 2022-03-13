@@ -12,6 +12,10 @@ public class Config {
         String AnySpecialServices = "Any Special Services";
 
     }
+    public interface team{
+        String TEAM_A = "TEAM_A";
+        String TEAM_B = "TEAM_B";
+    }
 
     public interface ExtrasHints{
         String TEAM_ID = "TEAM_ID";

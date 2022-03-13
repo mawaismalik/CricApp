@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CricApp">
         <activity android:name=".views.activities.TeamActivity"></activity>
+        <activity android:name=".views.activities.MatchActivity"></activity>
         <activity android:name=".views.activities.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

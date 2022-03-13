@@ -31,4 +31,13 @@
     <string name="player_number">Enter player number</string>
     <string name="players">Players</string>
     <string name="Done">Done</string>
+    <string name="team_selection">Team Selection</string>
+    <string name="vs">VS</string>
+    <string name="toss_won_by">Toss won by</string>
+    <string name="toss">Toss</string>
+    <string name="elected_to">Elected to</string>
+    <string name="bat">Bat</string>
+    <string name="bowl">Bowl</string>
+    <string name="select_team">Select Team</string>
+    <string name="ok">OK</string>
 </resources>
