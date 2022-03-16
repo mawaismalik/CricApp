@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.itroos.cricapp.R;
+import com.itroos.cricapp.dbo.entities.Matches;
 import com.itroos.cricapp.dbo.entities.Players;
 import com.itroos.cricapp.helpers.Config;
 import com.itroos.cricapp.helpers.Tools;
@@ -25,8 +26,11 @@ import com.itroos.cricapp.views.fragments.TeamInfoFragment;
 import com.itroos.cricapp.views.fragments.TeamSelectionFragment;
 import com.itroos.cricapp.views.fragments.TossFragment;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import me.relex.circleindicator.CircleIndicator;
 
@@ -39,7 +43,7 @@ public class MatchActivity extends AppCompatActivity {
     private TeamSelectionFragment teamSelectionFragment;
     private PlayersViewModel playersViewModel;
 
-    private String teamName;
+    private Matches matchA , matchB;
     List<Players> data = new ArrayList<>();
 
     @Override
@@ -53,6 +57,7 @@ public class MatchActivity extends AppCompatActivity {
 
         fragments = new SparseArray<Fragment>();
         playersViewModel = new PlayersViewModel(getApplicationContext());
+
 
 
         pager = (ViewPager) findViewById(R.id.vpPagerTeams);
@@ -82,6 +87,8 @@ public class MatchActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        matchA = new Matches();
+        matchB = new Matches();
 
         if (configFragment == null)
             configFragment = (ConfigFragment) fragments.get(0);
@@ -89,27 +96,52 @@ public class MatchActivity extends AppCompatActivity {
         if (teamSelectionFragment == null)
             teamSelectionFragment = (TeamSelectionFragment) fragments.get(1);
 
-        //teamName = teamInfoFragment.getTeamInfo();
-        if(teamName.isEmpty()){
-            Toast.makeText(getApplicationContext() , "Please enter team name" , Toast.LENGTH_SHORT).show();
+        matchA = configFragment.getMatchDetails();
+        matchB = teamSelectionFragment.getMatchDetails();
+        if(matchB != null) {
+
+            if ( matchB.getTeam_a_Id() == null || matchB.getTeam_a_Id().isEmpty() ) {
+                Toast.makeText(getApplicationContext(), "Please select Team A", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+
+            if (matchB.getTeam_b_Id() == null || matchB.getTeam_b_Id().isEmpty()) {
+                Toast.makeText(getApplicationContext(), "Please select Team B", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+
+            if (matchB.getToss_winner() == null || matchB.getToss_winner().isEmpty()) {
+                Toast.makeText(getApplicationContext(), "Please select Toss winner", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+            if (matchB.getElected_to() == null) {
+                Toast.makeText(getApplicationContext(), "Please select what toss winner elected to", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+
+        }
+        else {
             return false;
         }
-       // data = playersInfoFragment.getTeamPlayers();
+        if(matchA != null) {
 
-        int id = item.getItemId();
-        if (id == R.id.id_done) {
-            if(data != null){
-                if(data.isEmpty()){
-                    Toast.makeText(getApplicationContext() , "Please add players to team" , Toast.LENGTH_SHORT).show();
-                    return false;
-                }else {
+            //teamName = teamInfoFragment.getTeamInfo();
 
-                    playersViewModel.addTeam(Tools.convertTeamToSave(teamId, teamName));
-                    Toast.makeText(getApplicationContext() , "Team created successfully" , Toast.LENGTH_SHORT).show();
-                    finish();
-                }
-            }
-            return true;
+            matchA.setId(Tools.matchIdGenerator());
+            matchA.setTeam_a_name(matchB.getTeam_a_name());
+            matchA.setTeam_b_name(matchB.getTeam_b_name());
+            matchA.setTeam_a_Id(matchB.getTeam_a_Id());
+            matchA.setTeam_b_Id(matchB.getTeam_b_Id());
+            matchA.setToss_winner(matchB.getToss_winner());
+            matchA.setElected_to(matchB.getElected_to());
+            matchA.setStatus(1);
+            matchA.setTotal_score(0);
+            matchA.setDate(new SimpleDateFormat(Config.dateFormat.Short_Date_Format, Locale.getDefault()).format(new Date()));
+            // data = playersInfoFragment.getTeamPlayers();
+
+            playersViewModel.addMatch(matchA);
+            Toast.makeText(getApplicationContext(), "Match started successfully", Toast.LENGTH_SHORT).show();
+            finish();
         }
 
         return super.onOptionsItemSelected(item);

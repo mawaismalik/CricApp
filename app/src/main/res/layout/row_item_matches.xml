@@ -4,14 +4,15 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="@dimen/spacing_medium"
-    android:layout_marginTop="@dimen/five_margin"
+    android:layout_marginTop="@dimen/three_margin"
     android:layout_marginEnd="@dimen/five_margin"
     android:layout_marginStart="@dimen/five_margin"
+    android:layout_marginBottom="@dimen/three_margin"
     app:cardElevation="@dimen/spacing_medium"
     >
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/attendanceRoot"
+    <LinearLayout
+        android:id="@+id/matchRoot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -25,7 +26,7 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
             <TextView
-                android:id="@+id/serial_number_attendance_mer"
+                android:id="@+id/serial_number"
                 android:layout_width="0dp"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -93,7 +94,7 @@
                         android:paddingStart="@dimen/spacing_medium"
                         android:paddingEnd="@dimen/spacing_medium" />
                     <TextView
-                        android:id="@+id/tv_wo_site"
+                        android:id="@+id/tv_scored"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/S123"
@@ -116,7 +117,7 @@
 
 
             <TextView
-                android:id="@+id/attendance_status_mer"
+                android:id="@+id/status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="89dp"

@@ -27,4 +27,9 @@ public class Config {
         String TIME_FOMAT = "hh:mm a";
     }
 
+    public interface Status{
+        final Integer On_Going = 1;
+
+    }
+
 }

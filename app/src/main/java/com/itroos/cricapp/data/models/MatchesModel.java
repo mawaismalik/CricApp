@@ -12,6 +12,33 @@ public class MatchesModel {
     private Boolean Super_over;
     private String Toss_winner;
     private Integer Elected_to;
+    private String Date;
+    private Integer Total_score;
+    private Integer Status;
+
+    public Integer getTotal_score() {
+        return Total_score;
+    }
+
+    public void setTotal_score(Integer total_score) {
+        Total_score = total_score;
+    }
+
+    public Integer getStatus() {
+        return Status;
+    }
+
+    public void setStatus(Integer status) {
+        Status = status;
+    }
+
+    public String getDate() {
+        return Date;
+    }
+
+    public void setDate(String date) {
+        Date = date;
+    }
 
     public String getId() {
         return id;

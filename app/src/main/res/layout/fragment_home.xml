@@ -40,23 +40,10 @@
     </LinearLayout>
 
 
-    <include layout="@layout/row_item_matches"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginVertical="@dimen/three_margin"
-        android:layout_marginHorizontal="@dimen/five_margin"/>
-
-    <include layout="@layout/row_item_matches"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginVertical="@dimen/three_margin"
-        android:layout_marginHorizontal="@dimen/five_margin"/>
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_list"
+        android:id="@+id/rv_list_pm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         />
 
 

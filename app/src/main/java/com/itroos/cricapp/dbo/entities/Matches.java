@@ -16,11 +16,15 @@ public class Matches {
     private Boolean Super_over;
     private String Toss_winner;
     private Integer Elected_to;
-    @Generated(hash = 1266487186)
+    private String Date;
+    private Integer Total_score;
+    private Integer Status;
+    @Generated(hash = 1889474926)
     public Matches(String id, String Team_a_name, String Team_b_name,
             String Team_a_Id, String Team_b_Id, Integer Batter_per_team,
             Integer Overs_per_innings, Integer Max_over_per_bowler,
-            Boolean Super_over, String Toss_winner, Integer Elected_to) {
+            Boolean Super_over, String Toss_winner, Integer Elected_to, String Date,
+            Integer Total_score, Integer Status) {
         this.id = id;
         this.Team_a_name = Team_a_name;
         this.Team_b_name = Team_b_name;
@@ -32,6 +36,9 @@ public class Matches {
         this.Super_over = Super_over;
         this.Toss_winner = Toss_winner;
         this.Elected_to = Elected_to;
+        this.Date = Date;
+        this.Total_score = Total_score;
+        this.Status = Status;
     }
     @Generated(hash = 1282269782)
     public Matches() {
@@ -102,6 +109,23 @@ public class Matches {
     public void setElected_to(Integer Elected_to) {
         this.Elected_to = Elected_to;
     }
-
-
+    public String getDate() {
+        return this.Date;
+    }
+    public void setDate(String Date) {
+        this.Date = Date;
+    }
+    public Integer getTotal_score() {
+        return this.Total_score;
+    }
+    public void setTotal_score(Integer Total_score) {
+        this.Total_score = Total_score;
+    }
+    public Integer getStatus() {
+        return this.Status;
+    }
+    public void setStatus(Integer Status) {
+        this.Status = Status;
+    }
+ 
 }
